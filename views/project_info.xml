@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="project_project_extra_info_view_form" model="ir.ui.view">
+        <field name="name">project.project.extra_info.view.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Technical Info">
+                    <group>
+                        <field name="repo_url" widget="url"/>
+                        <field name="proj_domain" widget="url"/>
+                        <field name="odoo_version"/>
+                    </group>
+                    <group>
+                        <group string="SSH">
+                            <field name="ip_domain" widget="url"/>
+                            <field name="user"/>
+                            <field name="password"/>
+                        </group>
+                        <group string="Odoo Config">
+                            <field name="masterpass"/>
+                            <field name="addons"/>
+                            <field name="config" placeholder="Path to file"/>
+                            <field name="daemon" placeholder="Path to file"/>
+                            <field name="log" placeholder="Path to file"/>
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+    
+</odoo>
